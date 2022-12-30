@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ligula mi, maximus luctus auctor a, scelerisque posuere lectus. Ut aliquam velit eget accumsan pellentesque. Aenean quis urna et sem pharetra lacinia et vel risus. Aliquam commodo mi nulla, ut euismod nisi dapibus vitae. Curabitur cursus nunc convallis, dapibus turpis eu, vulputate neque. Nulla blandit arcu ac ultrices auctor. Nulla interdum ipsum ut tortor auctor finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent dapibus facilisis convallis. Duis tincidunt ante a eros feugiat, at tristique neque pharetra. Fusce at velit lacus. Fusce tortor felis, finibus in facilisis id, auctor id eros. Suspendisse potenti. Donec elementum, lorem at interdum vulputate, risus dolor ullamcorper neque, id commodo diam mi in orci. Aenean vitae tincidunt ex.  Praesent tincidunt varius nibh, ut tincidunt augue condimentum vitae. Cras scelerisque commodo nunc sit amet faucibus. Sed tincidunt, mi ac rutrum finibus, ipsum lorem mattis neque, et ornare lectus sem a justo. Aliquam id laoreet erat. Proin ac nisi fringilla, tincidunt nibh quis, molestie neque. Quisque in ex sit amet justo pellentesque placerat at quis odio. Nam scelerisque sollicitudin sem. Aenean et ex at dui venenatis pulvinar vestibulum vitae ligula.  Vestibulum molestie volutpat lorem eget cursus. Phasellus vel sagittis libero. Etiam eleifend, nisi nec viverra porta, enim ligula vestibulum diam, eget imperdiet odio nunc non turpis. Curabitur enim dolor, eleifend finibus lobortis in, feugiat in neque. Fusce ac commodo orci, eget pharetra ipsum. Suspendisse ut pretium felis. Aenean dignissim posuere felis, et accumsan tortor interdum eget. Pellentesque fermentum, quam ac cursus elementum, mi sapien suscipit justo, vitae fermentum nibh nulla sed nisl. Suspendisse laoreet, est et tristique maximus, ex dui efficitur quam, dictum aliquam velit tortor in sapien. Maecenas tellus ipsum, congue ut fringilla nec, pulvinar sit amet ex.",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
