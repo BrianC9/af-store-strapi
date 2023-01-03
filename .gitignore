@@ -105,7 +105,7 @@ coverage
 ############################
 # Strapi
 ############################
-
+database.js
 .env
 license.txt
 exports
