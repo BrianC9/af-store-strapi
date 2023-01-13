@@ -1,57 +1,84 @@
-# 🚀 Getting started with Strapi
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+# **AF** Store
 
-### `develop`
+Sneakers ecommerce inspired in the Nike **A**ir **F**orce sneaker collection
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+The Backend of this project has been made with Strapi, a headless CMS; and the Frontend with Remix
+## Deployment
 
-```
-npm run develop
-# or
-yarn develop
-```
+ [***You can go visit by clicking here !👈👈***](https://af-store-remix.vercel.app/)
 
-### `start`
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+## API Reference
+The endspoints I mainly used for this application are the following:
 
-```
-npm run start
-# or
-yarn start
+### Sneakers Endpoint
+
+#### Get all sneakers
+
+```http
+  GET /api/sneakers?populate=image
 ```
 
-### `build`
+#### Get one sneaker
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
+```http
+  GET /api/sneakers/${slug}?populate=image
 ```
-npm run build
-# or
-yarn build
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `slug`      | `string` | **Required**. Id of item to fetch |
+
+#### Get sneakers on sale
+
+```http
+  GET /api/sneakers/?filters[onSale]=true&populate=image
 ```
 
-## ⚙️ Deployment
+### Posts Endpoint
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+#### Get all posts
 
-## 📚 Learn more
+```http
+  GET /api/posts?populate=image
+```
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+#### Get one sneaker
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+```http
+  GET /api/posts/${slug}
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `slug`      | `string` | **Required**. Id of item to fetch |
 
-## ✨ Community
+#### Get the latest two posts
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+```http
+  GET /api/posts?sort=createdAt:DESC&pagination[limit]=2&populate=image
+```
 
----
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+## 🛠 Tech Stack
+
+**Client:** React, Remix, Vanilla CSS
+
+**Server:** Remix, Strapi, Node
+
+**Deployment:** Vercel and Cloudinary for the images
+
+## 🖥 Fronent respository
+You can visit the Strapi backend repository by clicking at the following link:
+
+[***AFStore Remix repository***](https://github.com/BrianC9/af-store-remix)
+
+
+## ✍ Contact details
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bryan-cusme/)
+
+
+### 👩‍⚖️ Legal disclaimer
+All trademarks, logos and images are the **property of their respective owners**. 
+All company, product and service names used in this website are for **learning and educational purposes only**. 
+Use of these names,trademarks and brands **does not imply endorsement**.
