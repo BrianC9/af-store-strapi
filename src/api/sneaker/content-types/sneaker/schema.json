@@ -36,7 +36,13 @@
     },
     "url": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
+    },
+    "onSale": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
